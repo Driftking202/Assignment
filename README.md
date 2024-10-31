@@ -54,8 +54,7 @@ To use these environment variables in Cypress, make sure to add `dotenv` to your
 
 ## Test Structure
 
-- **Login Test** (`cypress/e2e/login.spec.js`): Automates the login flow on Amazon, verifying successful login by checking the user’s name or account page.
-- **Add-to-Cart Test** (`cypress/e2e/addToCart.spec.js`): Automates searching for an item, selecting it, and adding it to the cart.
+- **Login/Add To Cart Test** (`cypress/e2e/login.spec.js`): Automates the login flow on Amazon, verifying successful login by checking the user’s name or account page.
 
 ### Example Test Flow
 
@@ -67,6 +66,8 @@ To use these environment variables in Cypress, make sure to add `dotenv` to your
 2. **Add to Cart Test**
    - Search for an item by name or keyword.
    - Select the item from the search results.
+   - Apply filters such as customer review and price range.
+   - Sorting from low to high.
    - Add the item to the cart.
    - Verify the item is added to the cart successfully.
 
@@ -75,7 +76,7 @@ To use these environment variables in Cypress, make sure to add `dotenv` to your
 ### Running Tests in Cypress Test Runner
 
 ```bash
-npx cypress open
+npm run test
 ```
 
 This opens the Cypress Test Runner, where you can select and run individual test cases interactively.
@@ -83,8 +84,7 @@ This opens the Cypress Test Runner, where you can select and run individual test
 ### Running Tests in Headless Mode
 
 ```bash
-npx cypress run
-```
+npx cypress runnpx cypress run --config-file cypress/staging.config.ts```
 
 This command runs all tests in headless mode, which is ideal for CI/CD pipelines.
 
@@ -93,11 +93,7 @@ This command runs all tests in headless mode, which is ideal for CI/CD pipelines
 **Run a Specific Test File:**
 ```bash
 npx cypress run --spec "cypress/e2e/login.spec.js"
-```
-
-**Run Tests with Environment Variables:**
-```bash
-AMAZON_EMAIL=your-email@example.com AMAZON_PASSWORD=yourpassword npx cypress run
+``
 ```
 
 ## Troubleshooting
@@ -111,10 +107,6 @@ AMAZON_EMAIL=your-email@example.com AMAZON_PASSWORD=yourpassword npx cypress run
 ## Contributing
 
 Feel free to submit issues or pull requests to improve the automation!
-
-## License
-
-This project is open-source and licensed under the MIT License.
 
 ---
 
