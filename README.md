@@ -32,8 +32,7 @@ Ensure you have the following installed on your machine:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Driftking202/amazon-automation-cypress.git
-   cd amazon-automation-cypress
+   git clone https://github.com/Driftking202/Assignment.git
    ```
 
 2. **Install Dependencies**:
