@@ -103,3 +103,6 @@ npx cypress run --spec "cypress/e2e/login.spec.js"
 
 - **Issue**: Test fails on login due to CAPTCHA.
   - **Solution**: Amazon sometimes uses CAPTCHA to prevent bot access. For regular testing, use a testing environment if available. Alternatively, retry tests as CAPTCHA challenges are not always persistent.
+  - Manual Intervention
+In some cases, you can configure Cypress tests to pause for manual CAPTCHA entry. This approach is less efficient but might be useful if CAPTCHA-solving services or bypasses are not available.
+Use cy.pause() to stop the test, allowing you to manually solve the CAPTCHA before resuming:
