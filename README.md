@@ -103,11 +103,3 @@ npx cypress run --spec "cypress/e2e/login.spec.js"
 
 - **Issue**: Test fails on login due to CAPTCHA.
   - **Solution**: Amazon sometimes uses CAPTCHA to prevent bot access. For regular testing, use a testing environment if available. Alternatively, retry tests as CAPTCHA challenges are not always persistent.
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the automation!
-
----
-
-This `README.md` provides a solid foundation for setting up, running, and troubleshooting Amazon login and add-to-cart automation with Cypress. Let me know if you'd like to expand on any specific sections!
